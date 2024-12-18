@@ -165,7 +165,9 @@ def check_quadrant(robots):
 SECONDS = 100
 robots = get_robots()
 
-for _ in range(SECONDS):
+
+
+for _ in range(SECONDS): # I could also avoid this loop and use the mod rows and cols
     for r in robots:
         new_x = r[0][0] + r[1][0]
         new_y = r[0][1] + r[1][1]
@@ -189,6 +191,8 @@ During the bathroom break, someone notices that these robots seem awfully simila
 What is the fewest number of seconds that must elapse for the robots to display the Easter egg?
 
 """
+
+# Xmas tree shows up when robots don't overlap
 
 def check_xmas_tree(robots, seconds):
     mat = []
